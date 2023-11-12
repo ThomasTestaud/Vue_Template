@@ -1,45 +1,30 @@
 <template>
-    <header class="border-b p-2">
+    <header class="border-b p-2 sticky top-0 bg-white">
         <div class="flex justify-between items-center">
             <div class="flex items-center">
-                <h1 class="font-bold text-xl mr-2">My App</h1>
+                <RouterLink class="mr-4 text-gray-800" to="/">
+                    <h1 class="font-bold text-xl">My App</h1>
+                </RouterLink>
                 <nav>
-                    <RouterLink class="mr-2 text-gray-700" to="/">Home</RouterLink>
-                    <RouterLink class="mr-2 text-gray-700" to="/about">About</RouterLink>
+                    <RouterLink class="mr-4 text-gray-600 hover:text-gray-800" to="/">Home</RouterLink>
+                    <RouterLink class="mr-4 text-gray-600 hover:text-gray-800" to="/about">About</RouterLink>
                 </nav>
             </div>
-            <button @click="toggleUserMenu()">
-                <i class="fa-regular fa-circle-user"></i>
-            </button>
-            <div @click="toggleUserMenu()" v-if="userMenuOpen" class="absolute right-1 top-12 border rounded  text-sm">
-                <RouterLink class="block py-1 px-2 hover:bg-gray-200" to="/profile">Profile</RouterLink>
-                <hr>
-                <button class="bg-red-500 hover:bg-red-400 text-white py-1 px-2 rounded-b" @click="disconnect">
-                    Sign out
-                </button>
-            </div>
+            <RouterLink to="/profile" class="bg-indigo-600 hover:bg-indigo-500 p-1 rounded-2xl text-white flex justify-center items-center">
+                <i class="fa-regular fa-circle-user p-0 custom-size"></i>
+            </RouterLink>
         </div>
     </header>
 </template>
 
-<script>
+<script setup>
 import { RouterLink } from 'vue-router';
-import router from '../router'
-export default {
-    data() {
-        return {
-            userMenuOpen: false
-        };
-    },
-    methods: {
-        disconnect() {
-            localStorage.removeItem('token');
-            router.push('/login');
-        },
-        toggleUserMenu() {
-            this.userMenuOpen = !this.userMenuOpen;
-        }
-    },
-    components: { RouterLink }
-}
+import { ref } from 'vue';
+
 </script>
+
+<style>
+  .custom-size {
+    font-size: 24px;
+  }
+</style>
