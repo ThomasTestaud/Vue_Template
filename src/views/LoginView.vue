@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<div class="pt-20"></div>
+		<div class="pt-12"></div>
 		<div class="border border-gray-300 rounded-lg lg:w-4/12 md:w-6/12 w-8/12 m-auto p-4 flex flex-col relative">
 			<h2 class="text-center mb-2">Log into your account</h2>
 

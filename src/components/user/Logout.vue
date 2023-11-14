@@ -12,6 +12,7 @@ import router from '../../router'
 
 const disconnect = () => {
     localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
     router.push('/login');
 }
 </script>

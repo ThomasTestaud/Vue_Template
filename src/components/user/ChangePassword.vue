@@ -20,7 +20,7 @@
             <label class="mt-4 text-sm text-gray-700">Confirm your new password:</label>
             <input type="password" class="bg-gray-100 rounded-lg px-2 py-1">
     
-            <button class="bg-indigo-600 hover:bg-indigo-700 rounded-lg my-4 text-white py-1">Change my password</button>
+            <button class="bg-green-500 hover:bg-green-600 rounded-lg my-4 text-white py-1">Change my password</button>
         </template>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<div class="pt-14"></div>
+		<div class="pt-8"></div>
 		<div class="border border-gray-300 rounded-lg lg:w-4/12 md:w-6/12 w-8/12 m-auto p-4">
 			<!-- Formulaire de connexion -->
 			<div class="flex flex-col">

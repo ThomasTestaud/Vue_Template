@@ -13,8 +13,8 @@
 </template>
 
 <script setup>
-import UserData from '../components/profile/UserData.vue';
-import ChangePassword from '../components/profile/ChangePassword.vue';
-import DeleteAccount from '../components/profile/DeleteAccount.vue';
-import Logout from '../components/profile/Logout.vue';
+import UserData from '../components/user/UserData.vue';
+import ChangePassword from '../components/user/ChangePassword.vue';
+import DeleteAccount from '../components/user/DeleteAccount.vue';
+import Logout from '../components/user/Logout.vue';
 </script>
